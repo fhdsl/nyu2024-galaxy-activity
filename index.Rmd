@@ -1,5 +1,5 @@
 ---
-title: "**Website Name**"
+title: "**NYU Workshops 2024**"
 output:
   html_document
 ---
@@ -10,25 +10,14 @@ Banner text!
 
 ### **About**
 
-This website was created with the OTTR_Template_Website template. This enables simpler creation of websites that have automated checks for broken URLs and spelling errors, as well as automated rendering of all html files. No need to worry about git conflicts for html files!
+This website was created with the OTTR_Template_Website template.
 
-Here is how you can include images in your website pages (this one is saved in `resources/images` to keep things tidy:
 
-```{r, fig.align='center', fig.alt= "Example image", echo = FALSE, out.width="30%"}
-knitr::include_graphics("resources/images/example_image.png")
-```
+We have 3 workshops each covering one of the following topics:
 
- 
- 
-We will go through the following:
-
-1. How to set up your repository to enable the GitHub actions of the template. (Setup tab)
-2. How to host your website using GitHub (Hosting tab)
-3. How to modify your website structure (Structure tab)
-4. How to change your website style (Style tab)
-5. More information about GitHub Actions (Git Actions tab)
-
-Click on each tab to learn more.
+1. What is gene expression data?
+2. What are cloud computing resources and how can you use them, specifically Galaxy?
+3. How is AI useful for scientific research and how do you use it responsibly? 
 
 
 

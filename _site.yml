@@ -6,18 +6,12 @@ navbar:
   - text: ""
     href: index.html
     icon: fa-home
-  - text: 1. Setup
-    href: setup.html
-  - text: 2. Hosting
-    href: hosting.html
-  - text: Editing
-    href: editing.html
-  - text: 3. Style
-    href: style.html
-  - text: 4. Git Actions
-    href: git_actions.html
-  - text: More ottr docs
-    href: https://www.ottrproject.org/
+  - text: Understanding Gene Expression Data
+    href: gene_expression_workshop.html
+  - text: Galaxy Activity
+    href: activity.html
+  - text: Other Resources
+    href: resources.html
 
 
 output:
