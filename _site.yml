@@ -1,7 +1,7 @@
-name: OTTR Template Website
+name: ITCR Training Network Workshops at NYU
 output_dir: 'docs'
 navbar:
-  title: OTTR Web
+  title: ITN at NYU
   left:
   - text: ""
     href: index.html
