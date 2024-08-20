@@ -5,7 +5,7 @@ output: html_document
 
 ## Slides
 
-The slides for this workshop are available at the [following link](https://bit.lyitn_nyu_2024_computing)
+The slides for this workshop are available at the [following link](https://bit.ly/itn_nyu_2024_computing)
 
 ```{r echo=FALSE, fig.alt="The slides for this workshop are available by scanning this QR code or by visiting the link h t t p s colon forward slash forward slash bit dot l y forward slash i t n underscore n y u underscore 2024 underscore computing", fig.link="https://bit.ly/itn_nyu_2024_computing"}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1iQlW7yMfAGrv1cz-QfzQ5fUmTnsvQl1Kf_696v1ioUE/edit#slide=id.g2814eb71889_0_10")
