@@ -41,19 +41,10 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1gFNEhfp4Vh131tpH
 
 ### Relevant (free!) courses
 
-Material for this workshop is adapted from the [AI for Efficient Programming ITN course](https://hutchdatascience.org/AI_for_Efficient_Programming/). That and our other courses are available for free. See [our website](https://www.itcrtraining.org/courses) for more information. 
+Material for this workshop is adapted from the [AI for Efficient Programming ITN course](https://hutchdatascience.org/AI_for_Efficient_Programming/) and the [AI for Decision Makers ITN course](https://hutchdatascience.org/AI_for_Decision_Makers/introduction-to-avoiding-ai-harm.html). That and our other courses are available for free. See [our website](https://www.itcrtraining.org/courses) for more information. 
 
 ```{r echo=FALSE, fig.alt="This table lists the various courses available from the I T N including ones under development that will be available in the future. A I for efficient programming is highlighted becasue this workshop is adapted from that larger course. For more info on and to access any of these courses, visit i t c r training dot org", fig.link="https://www.itcrtraining.org/courses"}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1gFNEhfp4Vh131tpHvdntvpIKKwlJilaNfJLiMTeXvDA/edit#slide=id.g2efffa5458b_0_0")
-```
-
-Additional ITN courses with related material from this workshop include 
-
-- [Ethical Data Handling for Cancer Research](https://hutchdatascience.org/Ethical_Data_Handling_for_Cancer_Research/)
-- [AI for Decision Makers](https://hutchdatascience.org/AI_for_Decision_Makers/introduction-to-avoiding-ai-harm.html)
-
-```{r echo=FALSE, fig.alt="Ethical Data Handling for Cancer Research and A I for Decision Makers are two other I T N courses that contain relevant information for this topic. For more info on and to access these courses, visit i t c r training dot org", fig.link="https://www.itcrtraining.org/courses"}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1gFNEhfp4Vh131tpHvdntvpIKKwlJilaNfJLiMTeXvDA/edit#slide=id.g2815146d9d2_0_571")
 ```
 
 ### A paper about which chat bot is best for specific tasks
