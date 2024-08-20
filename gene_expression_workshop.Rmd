@@ -49,7 +49,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1IxnNcgbHLuwOMofO
 
 - [Download practice 10x single cell data](https://s3-us-west-2.amazonaws.com/10x.files/samples/cell/pbmc3k/pbmc3k_filtered_gene_bc_matrices.tar.gz)
 
-```{r echo=FALSE fig.alt="Use this link to download practice 10x single cell data. No need to unzip it", fig.link="https://s3-us-west-2.amazonaws.com/10x.files/samples/cell/pbmc3k/pbmc3k_filtered_gene_bc_matrices.tar.gz"}
+```{r echo=FALSE, fig.alt="Use this link to download practice 10x single cell data. No need to unzip it", fig.link="https://s3-us-west-2.amazonaws.com/10x.files/samples/cell/pbmc3k/pbmc3k_filtered_gene_bc_matrices.tar.gz"}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1IxnNcgbHLuwOMofOqhKx5IoIbPI1DNtPyORT4FjK6TY/edit#slide=id.g2800f2a6905_0_37")
 ```
 
