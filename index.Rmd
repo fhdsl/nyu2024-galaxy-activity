@@ -1,23 +1,26 @@
 ---
-title: "**NYU Workshops 2024**"
+title: "**ITN at NYU Workshops 2024**"
 output:
   html_document
 ---
 
 <div class = "banner_color">
-Banner text!  
+Welcome to the ITN at NYU Workshops!  
 </div>
 
 ### **About**
 
-This website was created with the OTTR_Template_Website template.
+This website was created with the [OTTR_Template_Website template](https://www.ottrproject.org/) and serves as a unified source to access slides and other resources utilized in each workshop.
 
 
-We have 3 workshops each covering one of the following topics:
+There are 3 workshops throughout the day, each covering one of the following topics:
 
-1. What is gene expression data?
-2. What are cloud computing resources and how can you use them, specifically Galaxy?
-3. How is AI useful for scientific research and how do you use it responsibly? 
+1. [What is gene expression data?](https://hutchdatascience.org/nyu2024-galaxy-activity/gene_expression_workshop.html)<br/>
+10am - 11:30am -- Session led by Candace Savonen and Kate Isaac<br/><br/>
+2. [What are cloud computing resources and how can you use them, specifically Galaxy?](https://hutchdatascience.org/nyu2024-galaxy-activity/computing_workshop.html)<br/>
+12pm - 1:30pm -- Session led by Carrie Wright and Kate Isaac<br/><br/>
+3. [How is AI useful for scientific research and how do you use it responsibly?](https://hutchdatascience.org/nyu2024-galaxy-activity/ai_workshop.html)<br/>
+1:45pm - 3pm -- Session led by Carrie Wright and Candace Savonen<br/><br/> 
 
 
 

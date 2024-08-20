@@ -8,10 +8,12 @@ navbar:
     icon: fa-home
   - text: Understanding Gene Expression Data
     href: gene_expression_workshop.html
+  - text: Computing for Cancer Informatics
+    href: computing_workshop.html
   - text: Galaxy Activity
     href: activity.html
-  - text: Other Resources
-    href: resources.html
+  - text: AI for Research Work
+    href: ai_workshop.html
 
 
 output:

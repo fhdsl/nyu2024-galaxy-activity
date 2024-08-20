@@ -1,0 +1,61 @@
+---
+title: "AI for Research Work Workshop"
+output: html_document
+---
+
+## Slides
+
+The slides for this workshop are available at the [following link](https://bit.ly/itn_nyu_2024_ai)
+
+```{r echo=FALSE, fig.alt="", fig.link =""}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1gFNEhfp4Vh131tpHvdntvpIKKwlJilaNfJLiMTeXvDA/edit#slide=id.g2814c9cb41d_0_5")
+```
+
+## Logistical information
+
+### Learner Survey
+
+Please provide information in the [following survey](https://bit.ly/hutch_learner) as this helps us keep you informed of upcoming workshops, and to follow up and see how you are using what you have learned.
+
+```{r echo=FALSE, fig.alt="To provide information for us, please scan this QR code or use the link h t t p s colon forward slash forward slash bit dot l y forward slash hutch underscore learner", fig.link="https://bit.ly/hutch_learner"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1gFNEhfp4Vh131tpHvdntvpIKKwlJilaNfJLiMTeXvDA/edit#slide=id.g2f288e8e9b9_0_0")
+```
+
+### Slido
+
+Please also login to slido at [slido.com](https://www.slido.com/) for this workshop for interactive questions throughout.
+
+```{r echo=FALSE, fig.alt="The Slido code for this workshop is 2082139. Please enter the code at slido dot com", fig.link="https://www.slido.com/"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1gFNEhfp4Vh131tpHvdntvpIKKwlJilaNfJLiMTeXvDA/edit#slide=id.g258ce79cf2b_0_204")
+```
+
+### Learner Demographic Survey
+
+Please provide information in the [following survey](https://bit.ly/itn_demo) as this helps us gather necessary information we need to report to the NIH for trainings we host.
+
+```{r echo=FALSE, fig.alt="To provide us with necessary reporting information, please use this QR code or follow the link h t t p s colon forward slash forward slash bit dot l y forward slash i t n underscore demo", fig.link="https://bit.ly/itn_demo"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1gFNEhfp4Vh131tpHvdntvpIKKwlJilaNfJLiMTeXvDA/edit#slide=id.g28548f404c3d183_615")
+```
+
+## Other Resources
+
+### Relevant (free!) courses
+
+Material for this workshop is adapted from the [AI for Efficient Programming ITN course](https://hutchdatascience.org/AI_for_Efficient_Programming/). That and our other courses are available for free. See [our website](https://www.itcrtraining.org/courses) for more information. 
+
+```{r echo=FALSE, fig.alt="This table lists the various courses available from the I T N including ones under development that will be available in the future. A I for efficient programming is highlighted becasue this workshop is adapted from that larger course. For more info on and to access any of these courses, visit i t c r training dot org", fig.link="https://www.itcrtraining.org/courses"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1gFNEhfp4Vh131tpHvdntvpIKKwlJilaNfJLiMTeXvDA/edit#slide=id.g2efffa5458b_0_0")
+```
+
+Additional ITN courses with related material from this workshop include 
+
+- [Ethical Data Handling for Cancer Research](https://hutchdatascience.org/Ethical_Data_Handling_for_Cancer_Research/)
+- [AI for Decision Makers](https://hutchdatascience.org/AI_for_Decision_Makers/introduction-to-avoiding-ai-harm.html)
+
+```{r echo=FALSE, fig.alt="Ethical Data Handling for Cancer Research and A I for Decision Makers are two other I T N courses that contain relevant information for this topic. For more info on and to access these courses, visit i t c r training dot org", fig.link="https://www.itcrtraining.org/courses"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1gFNEhfp4Vh131tpHvdntvpIKKwlJilaNfJLiMTeXvDA/edit#slide=id.g2815146d9d2_0_571")
+```
+
+### A paper about which chat bot is best for specific tasks
+
+Check out [this paper describing which chat bot is the best for the research task you're interested in](https://www-nature-com.fhcrc.idm.oclc.org/articles/d41586-023-03023-4)
