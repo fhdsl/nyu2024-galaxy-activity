@@ -31,6 +31,34 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1IxnNcgbHLuwOMofO
 
 ### Gene Pattern Activity
 
+#### Bulk RNA-seq
+
+- [Download the relevant datasets at this link](https://datasets.genepattern.org/?prefix=data/workshops/240411-PSTP/)
+
+```{r echo=FALSE, fig.alt="This slide provides info on which datasets to download, specifically the c l s and g c t files, from h t t p s colon forward slash forward slash datasets doc gene pattern dot org forward slash question mark prefix equal sign data forward slash workshops forward slash 240411 dash P S T P forward slash", fig.link="https://datasets.genepattern.org/?prefix=data/workshops/240411-PSTP/"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1IxnNcgbHLuwOMofOqhKx5IoIbPI1DNtPyORT4FjK6TY/edit#slide=id.g2f2ca03ec26_0_0")
+```
+
+- [Go to the Gene Pattern platform](http://cloud.genepattern.org/gp/)
+
+```{r echo=FALSE, fig.alt="Go to h t t p colon forward slash forward slash cloud dot gene pattern dot org forward slash g p forward slash", fig.link="http://cloud.genepattern.org/gp/"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1IxnNcgbHLuwOMofOqhKx5IoIbPI1DNtPyORT4FjK6TY/edit#slide=id.g2f2ca03ec26_0_34")
+```
+
+#### Single cell RNA-seq
+
+- [Download practice 10x single cell data](https://s3-us-west-2.amazonaws.com/10x.files/samples/cell/pbmc3k/pbmc3k_filtered_gene_bc_matrices.tar.gz)
+
+```{r echo=FALSE fig.alt="Use this link to download practice 10x single cell data. No need to unzip it", fig.link="https://s3-us-west-2.amazonaws.com/10x.files/samples/cell/pbmc3k/pbmc3k_filtered_gene_bc_matrices.tar.gz"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1IxnNcgbHLuwOMofOqhKx5IoIbPI1DNtPyORT4FjK6TY/edit#slide=id.g2800f2a6905_0_37")
+```
+
+- [Go to the Gene Pattern platform](http://cloud.genepattern.org/gp/)
+
+```{r echo=FALSE, fig.alt="Go to h t t p colon forward slash forward slash cloud dot gene pattern dot org forward slash g p forward slash", fig.link="http://cloud.genepattern.org/gp/"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1IxnNcgbHLuwOMofOqhKx5IoIbPI1DNtPyORT4FjK6TY/edit#slide=id.g2800f2a6905_0_165")
+```
+
 
 ### Learner Demographic Survey
 
