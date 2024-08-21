@@ -18,7 +18,7 @@ There are 3 workshops throughout the day, each covering one of the following top
 1. [What is gene expression data?](https://hutchdatascience.org/nyu2024-galaxy-activity/gene_expression_workshop.html)<br/>
 10am - 11:30am -- Session led by Candace Savonen and Kate Isaac<br/><br/>
 2. [What are cloud computing resources and how can you use them, specifically Galaxy?](https://hutchdatascience.org/nyu2024-galaxy-activity/computing_workshop.html)<br/>
-12pm - 1:30pm -- Session led by Carrie Wright and Kate Isaac<br/><br/>
+12pm - 1:30pm -- Session led by Carrie Wright and Kate Isaac with an [Intro to using Galaxy for a gene expression analysis actvity](https://hutchdatascience.org/nyu2024-galaxy-activity/activity.html)<br/><br/>
 3. [How is AI useful for scientific research and how do you use it responsibly?](https://hutchdatascience.org/nyu2024-galaxy-activity/ai_workshop.html)<br/>
 1:45pm - 3pm -- Session led by Carrie Wright and Candace Savonen<br/><br/> 
 
