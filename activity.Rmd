@@ -7,7 +7,7 @@ output: html_document
 
 Our Galaxy activity is a condensed tutorial based on the ["Reference-based RNA-Seq data analysis"](https://training.galaxyproject.org/training-material/topics/transcriptomics/tutorials/ref-based/tutorial.html) Galaxy Training Tutorial. 
 
-It uses [data that is deposited on and available from zenodo](https://zenodo.org/records/6457007), including subsampled data that will be quicker to work with. 
+It uses [data that is deposited on and available from zenodo](https://zenodo.org/records/6457007), including subsampled data that will be quicker to work with. For more info on the data, checkout the tutorial linked above.
 
 # Activity steps
 
@@ -219,7 +219,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1kWsS23lOJxfbhE8j
 ottrpal::include_slide("https://docs.google.com/presentation/d/1kWsS23lOJxfbhE8jSdE92JWnEceUEYm5xovCczPbe-8/edit#slide=id.g281646704fe_0_77")
 ```
 
-- [ ] If the "Raw read data from your current history doesn't automatically fill with the renamed output from the Flatten collection tool, select that dataset as input. 
+- [ ] If the "Raw read data" from your current history doesn't automatically fill with the renamed output from the Flatten collection tool, select that dataset as input. 
 
 ```{r echo=FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1kWsS23lOJxfbhE8jSdE92JWnEceUEYm5xovCczPbe-8/edit#slide=id.g281646704fe_0_82")
@@ -243,7 +243,6 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1kWsS23lOJxfbhE8j
 ottrpal::include_slide("https://docs.google.com/presentation/d/1kWsS23lOJxfbhE8jSdE92JWnEceUEYm5xovCczPbe-8/edit#slide=id.g281646704fe_0_97")
 ```
 
-
 - [ ] In the FastQC output section, click the `+ Insert FastQC output` button. 
 
 ```{r echo=FALSE}
@@ -256,28 +255,111 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1kWsS23lOJxfbhE8j
 ottrpal::include_slide("https://docs.google.com/presentation/d/1kWsS23lOJxfbhE8jSdE92JWnEceUEYm5xovCczPbe-8/edit#slide=id.g281646704fe_0_104")
 ```
  
- - [ ] Then with the down arrow, select the `FASTQC on collection __: RawData` data set
+- [ ] Then with the down arrow, select the `FASTQC on collection __: RawData` data set
  
 ```{r echo=FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1kWsS23lOJxfbhE8jSdE92JWnEceUEYm5xovCczPbe-8/edit#slide=id.g281646704fe_0_112") 
 ```
+  
+- [ ] Optionally, you can add a Report title near the bottom of the middle pane
  
- - [ ] Optionally, you can add a Report title near the bottom of the middle pane
- 
- - [ ] Click the blue Run tool button in the upper right of the middle pane
+- [ ] Click the blue Run tool button in the upper right of the middle pane
  
 ```{r echo=FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1kWsS23lOJxfbhE8jSdE92JWnEceUEYm5xovCczPbe-8/edit#slide=id.g281646704fe_0_116")
 ```
 
- - [ ] Let's open and inspect the webpage output at the top of the history pane
+- [ ] Let's open and inspect the webpage output at the top of the history pane. To view the output file, click the eye icon. To download the output, click the save/floppy disc icon. 
  
+```{r echo=FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1kWsS23lOJxfbhE8jSdE92JWnEceUEYm5xovCczPbe-8/edit#slide=id.g281646704fe_0_126")
+```
  
 ### Cutadapt / Trim adaptors
 
-## Mapping
+- [ ] On the top left of the page, using the tool pane search bar, type `Cut` into the search bar and select the `Cutadapt` tool. This will open the `Cutadapt` tool in the middle pane.  
+  
+```{r echo=FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1kWsS23lOJxfbhE8jSdE92JWnEceUEYm5xovCczPbe-8/edit#slide=id.g281646704fe_0_121")
+```
 
-### Run STAR
+```{r echo=FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1kWsS23lOJxfbhE8jSdE92JWnEceUEYm5xovCczPbe-8/edit#slide=id.g281646704fe_0_133")
+```
 
-### MultiQC to combine log output from STAR 
+- [ ]  For `Single-end or Paired-end reads?` click the down arrow and select `Paired-end Collection`. 
+  
+```{r echo=FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1kWsS23lOJxfbhE8jSdE92JWnEceUEYm5xovCczPbe-8/edit#slide=id.g281646704fe_0_137")
+```
+  
+- [ ]  Verify that it selected your `2 PE fastqs` as the paired collection input, if not, select it.
+  
+```{r echo=FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1kWsS23lOJxfbhE8jSdE92JWnEceUEYm5xovCczPbe-8/edit#slide=id.g281646704fe_0_141")
+```
 
+- [ ] Scroll down to the `Other Read Trimming Options` section and edit the `Quality cutoff(s) (R1)*` parameter. Enter a value of 20.
+  
+```{r echo=FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1kWsS23lOJxfbhE8jSdE92JWnEceUEYm5xovCczPbe-8/edit#slide=id.g281646704fe_0_146")
+```
+
+- [ ]  Scroll down to the `Read Filtering Options` section and edit the `Minimum length (R1)` parameter. Enter a value of 20.
+  
+```{r echo=FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1kWsS23lOJxfbhE8jSdE92JWnEceUEYm5xovCczPbe-8/edit#slide=id.g281646704fe_0_156")
+```
+
+- [ ] Scroll down to the `Additional outputs to generate` checkbox section and check the `Report: Cutadapt's per-adapter statistics. You can use this file with MultiQC`
+
+```{r echo=FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1kWsS23lOJxfbhE8jSdE92JWnEceUEYm5xovCczPbe-8/edit#slide=id.g281646704fe_0_160")
+```
+  
+- [ ] Click the blue Run tool button
+
+### View Cutadapt results with MultiQC
+
+- [ ] On the top left of the page, using the tool pane search bar, type `multi` into the search bar and select the `MultiQC` tool. This will open the `MultiQC` tool in the middle pane.  
+
+```{r echo=FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1kWsS23lOJxfbhE8jSdE92JWnEceUEYm5xovCczPbe-8/edit#slide=id.g281646704fe_0_88")
+```
+
+```{r echo=FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1kWsS23lOJxfbhE8jSdE92JWnEceUEYm5xovCczPbe-8/edit#slide=id.g281646704fe_0_93")
+```
+
+- [ ] Within the `Results` section and `Which tool was used to generate logs` subsection, click the down arrow and select `Cutadapt/Trim Galore!`. 
+
+```{r echo=FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1kWsS23lOJxfbhE8jSdE92JWnEceUEYm5xovCczPbe-8/edit#slide=id.g281646704fe_0_168")
+
+```
+
+- [ ] In the blue banner highlighted section, select the file folder "Dataset collection" icon & then with the down arrow, select the `Cutadapt on collection __: Report` data set 
+
+```{r echo=FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1kWsS23lOJxfbhE8jSdE92JWnEceUEYm5xovCczPbe-8/edit#slide=id.g281646704fe_0_172")
+```
+
+- [ ] We can explore this output as well to see how much of the data was trimmed
+
+## Next steps: Mapping with RNA STAR
+
+Follow the steps in the [Galaxy walkthrough to continue with mapping](https://training.galaxyproject.org/training-material/topics/transcriptomics/tutorials/ref-based/tutorial.html#mapping)
+
+## Additional Resources 
+
+Here are some other relevant tutorials from Galaxy:
+
+### Bulk-RNA Seq 
+
+[RNA-Seq Reads to Counts](https://usegalaxy.org/training-material/topics/transcriptomics/tutorials/rna-seq-reads-to-counts/tutorial.html#1-rna-seq-reads-to-counts)
+
+[RNA-Seq Counts to Genes (differentially expressed genes)](https://usegalaxy.org/training-material/topics/transcriptomics/tutorials/rna-seq-counts-to-genes/tutorial.html)
+
+[RNA-Seq Genes to Pathways (GSEA)](https://usegalaxy.org/training-material/topics/transcriptomics/tutorials/rna-seq-genes-to-pathways/tutorial.html)
+
+[Tutorials for Visualizing RNA-seq Results](https://usegalaxy.org/training-material/topics/transcriptomics/tutorials/rna-seq-genes-to-pathways/tutorial.html)
