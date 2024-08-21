@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Galaxy Gene Expression Activity</title>
+
+<script src="site_libs/header-attrs-2.27.1/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
+<link rel="shortcut icon" href="resources/images/favicon.ico" />
+ <!--- go to https://favicon.io/favicon-converter/ to upload an image to make a new favicon.io. You will need to replace the current favicon.io image with the one in the downloaded directory from the website. The current image is in the resources/images/ directory --->
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">ITN at NYU</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">
+    <span class="fa fa-home"></span>
+     
+    
+  </a>
+</li>
+<li>
+  <a href="gene_expression_workshop.html">Understanding Gene Expression Data</a>
+</li>
+<li>
+  <a href="computing_workshop.html">Computing for Cancer Informatics</a>
+</li>
+<li>
+  <a href="activity.html">Galaxy Activity</a>
+</li>
+<li>
+  <a href="ai_workshop.html">AI for Research Work</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Galaxy Gene Expression Activity</h1>
+
+</div>
+
+
+<div id="overview-of-activity-and-data" class="section level1">
+<h1>Overview of activity and data</h1>
+<p>Our Galaxy activity is a condensed tutorial based on the <a
+href="https://training.galaxyproject.org/training-material/topics/transcriptomics/tutorials/ref-based/tutorial.html">“Reference-based
+RNA-Seq data analysis”</a> Galaxy Training Tutorial.</p>
+<p>It uses <a href="https://zenodo.org/records/6457007">data that is
+deposited on and available from zenodo</a>, including subsampled data
+that will be quicker to work with.</p>
+</div>
+<div id="activity-steps" class="section level1">
+<h1>Activity steps</h1>
+<div id="set-up-galaxys-history-pane" class="section level2">
+<h2>Set up Galaxy’s history pane</h2>
+<ul class="task-list">
+<li><p><input type="checkbox" />If you have files in your history
+already, use the plus sign button on the top right of the history pane
+to <code>Create new history</code>.</p></li>
+<li><p><input type="checkbox" />Click the pencil button next to “Unnamed
+history”. Fill in the name with something descriptive/appropriate and
+add more detail a description to the annotation if you want. Click
+“Save”</p></li>
+</ul>
+<p>Our History pane is empty and we’ll need to load data.</p>
+</div>
+<div id="data-upload" class="section level2">
+<h2>Data upload</h2>
+<p>Why do we want sequencing reads and a reference genome? Why are there
+4 files for sequencing reads?</p>
+<div id="sequencing-reads" class="section level3">
+<h3>Sequencing reads</h3>
+<ul class="task-list">
+<li><input type="checkbox" />Copy these links:</li>
+</ul>
+<pre><code>https://zenodo.org/record/6457007/files/GSM461177_1_subsampled.fastqsanger
+https://zenodo.org/record/6457007/files/GSM461177_2_subsampled.fastqsanger
+https://zenodo.org/record/6457007/files/GSM461180_1_subsampled.fastqsanger
+https://zenodo.org/record/6457007/files/GSM461180_2_subsampled.fastqsanger</code></pre>
+<ul class="task-list">
+<li><input type="checkbox" />In Galaxy, click the “Upload” button in the
+top left of the page.</li>
+</ul>
+<p><img src="activity_files/figure-html/1kWsS23lOJxfbhE8jSdE92JWnEceUEYm5xovCczPbe-8_g281646704fe_0_0.png" alt="In the top left of the page, there is a button named Upload with a rectangle and an arrow pointing up. Please click that button" width="480" /></p>
+<p>This will open up an interactive panel for data upload:</p>
+<p><img src="activity_files/figure-html/1kWsS23lOJxfbhE8jSdE92JWnEceUEYm5xovCczPbe-8_g2f3201278fa_0_0.png" alt="This is the interactive panel that opens for data upload" width="480" /></p>
+<ul class="task-list">
+<li><input type="checkbox" />Click the “Paste/Fetch Data” button in the
+middle of the bottom stretch of options.</li>
+</ul>
+<p><img src="activity_files/figure-html/1kWsS23lOJxfbhE8jSdE92JWnEceUEYm5xovCczPbe-8_g281646704fe_0_5.png" alt="Please click the Paste/Fetch data button in the middle of the bottom stretch of the " width="480" /></p>
+<ul class="task-list">
+<li><input type="checkbox" />Paste the copied URLs into the middle
+box.</li>
+</ul>
+<p><img src="activity_files/figure-html/1kWsS23lOJxfbhE8jSdE92JWnEceUEYm5xovCczPbe-8_g281646704fe_0_10.png" width="480" /></p>
+<ul class="task-list">
+<li><input type="checkbox" />Using the first dropdown menu on the top
+(labeled “Auto-detect”), let’s select the filetype:
+<code>fastqsanger</code> (Note the list includes both
+<code>fastqcsanger</code> and <code>fastqsanger</code> where one is QC
+and the other is just q. Select the one with just a q).</li>
+</ul>
+<p><img src="activity_files/figure-html/1kWsS23lOJxfbhE8jSdE92JWnEceUEYm5xovCczPbe-8_g281646704fe_0_16.png" width="480" /></p>
+<ul class="task-list">
+<li><input type="checkbox" />Using the second dropdown menu on the top
+(labeled “unspecified (?)”), let’s select the reference organism:
+<code>D. melanogaster Aug. 2014 (BDGP Release 6 + ISO1 MT/dm6) (dm6)</code></li>
+</ul>
+<p><img src="activity_files/figure-html/1kWsS23lOJxfbhE8jSdE92JWnEceUEYm5xovCczPbe-8_g281646704fe_0_21.png" width="480" /></p>
+<ul class="task-list">
+<li><input type="checkbox" />Click the blue “Start” button in the bottom
+stretch of options.</li>
+</ul>
+<p><img src="activity_files/figure-html/1kWsS23lOJxfbhE8jSdE92JWnEceUEYm5xovCczPbe-8_g281646704fe_0_27.png" width="480" /></p>
+<ul class="task-list">
+<li><input type="checkbox" />Click the “Close” button at the end of the
+bottom stretch of options.</li>
+</ul>
+<p><img src="activity_files/figure-html/1kWsS23lOJxfbhE8jSdE92JWnEceUEYm5xovCczPbe-8_g281646704fe_0_33.png" width="480" /></p>
+<div id="creating-a-paired-collection" class="section level4">
+<h4>Creating a paired collection</h4>
+<ul class="task-list">
+<li><input type="checkbox" />Click the “Select items” check in a box
+button on the left of the banner above the listed datasets</li>
+</ul>
+<p><img src="activity_files/figure-html/1kWsS23lOJxfbhE8jSdE92JWnEceUEYm5xovCczPbe-8_g2f3201278fa_0_6.png" width="480" /></p>
+<ul class="task-list">
+<li><input type="checkbox" />Click “Select all” that appears on the
+right of the banner</li>
+</ul>
+<p><img src="activity_files/figure-html/1kWsS23lOJxfbhE8jSdE92JWnEceUEYm5xovCczPbe-8_g2f3201278fa_0_12.png" width="480" /></p>
+<ul class="task-list">
+<li><input type="checkbox" />Click the down arrow</li>
+</ul>
+<p><img src="activity_files/figure-html/1kWsS23lOJxfbhE8jSdE92JWnEceUEYm5xovCczPbe-8_g2f3201278fa_0_16.png" width="480" /></p>
+<ul class="task-list">
+<li><input type="checkbox" />Click “Build List of Dataset Pairs”.</li>
+</ul>
+<p><img src="activity_files/figure-html/1kWsS23lOJxfbhE8jSdE92JWnEceUEYm5xovCczPbe-8_g2f3201278fa_0_20.png" width="480" /></p>
+<p>This will open up an interactive panel:</p>
+<p><img src="activity_files/figure-html/1kWsS23lOJxfbhE8jSdE92JWnEceUEYm5xovCczPbe-8_g2f3201278fa_0_24.png" width="480" /></p>
+<ul class="task-list">
+<li><input type="checkbox" />In the bottom right corner, enter
+<code>2 PE fastqs</code> as the name</li>
+</ul>
+<p><img src="activity_files/figure-html/1kWsS23lOJxfbhE8jSdE92JWnEceUEYm5xovCczPbe-8_g281646704fe_0_43.png" width="480" /></p>
+<ul class="task-list">
+<li><p><input type="checkbox" />In the green strips, there are 3
+columns, for each fastqsanger pair, in the middle column we’ll edit the
+displayed name to be a more informative name.</p>
+<ul class="task-list">
+<li><input type="checkbox" />Click on “GSM461177_subsampled”, and enter
+“GSM461177_untreat_paired”</li>
+<li><input type="checkbox" />Click on “GSM461180_subsampled”, and enter
+“GSM461180_treat_paired”</li>
+</ul></li>
+</ul>
+<p><img src="activity_files/figure-html/1kWsS23lOJxfbhE8jSdE92JWnEceUEYm5xovCczPbe-8_g281646704fe_0_48.png" width="480" /></p>
+<ul class="task-list">
+<li><input type="checkbox" />Click the blue “Create collection” button
+on the bottom right</li>
+</ul>
+</div>
+</div>
+<div id="reference-genome-annotation" class="section level3">
+<h3>Reference genome annotation</h3>
+<ul class="task-list">
+<li><input type="checkbox" />Copy this link:</li>
+</ul>
+<pre><code>https://zenodo.org/record/6457007/files/Drosophila_melanogaster.BDGP6.32.109_UCSC.gtf.gz</code></pre>
+<ul class="task-list">
+<li><input type="checkbox" />In Galaxy, click the “Upload” button in the
+top left of the page. This will open up an interactive panel for data
+upload.</li>
+</ul>
+<p><img src="activity_files/figure-html/1kWsS23lOJxfbhE8jSdE92JWnEceUEYm5xovCczPbe-8_g281646704fe_0_0.png" alt="In the top left of the page, there is a button named Upload with a rectangle and an arrow pointing up. Please click that button" width="480" /></p>
+<p>This will open up an interactive panel for data upload:</p>
+<p><img src="activity_files/figure-html/1kWsS23lOJxfbhE8jSdE92JWnEceUEYm5xovCczPbe-8_g2f3201278fa_0_28.png" alt="This is the interactive panel that opens for data upload" width="480" /></p>
+<ul class="task-list">
+<li><input type="checkbox" />Click the “Paste/Fetch Data” button in the
+middle of the bottom stretch of options.</li>
+</ul>
+<pre class="r"><code>ottrpal::include_slide(&quot;https://docs.google.com/presentation/d/1kWsS23lOJxfbhE8jSdE92JWnEceUEYm5xovCczPbe-8/edit#slide=id.g281646704fe_0_59&quot;)</code></pre>
+<p><img src="activity_files/figure-html/1kWsS23lOJxfbhE8jSdE92JWnEceUEYm5xovCczPbe-8_g281646704fe_0_59.png" width="480" /></p>
+<ul class="task-list">
+<li><p><input type="checkbox" />Paste the copied URL into the middle
+box.</p></li>
+<li><p><input type="checkbox" />Using the first dropdown menu on the top
+(labeled “Auto-detect”), let’s select the filetype:
+<code>gtf</code>.</p></li>
+<li><p><input type="checkbox" />Using the second dropdown menu on the
+top (labeled “unspecified (?)”), let’s select the reference organism:
+<code>D. melanogaster Aug. 2014 (BDGP Release 6 + ISO1 MT/dm6) (dm6)</code></p></li>
+<li><p><input type="checkbox" />Click the blue “Start” button in the
+bottom stretch of options.</p></li>
+<li><p><input type="checkbox" />Click the “Close” button at the end of
+the bottom stretch of options.</p></li>
+</ul>
+</div>
+</div>
+<div id="quality-control" class="section level2">
+<h2>Quality Control</h2>
+<p>Now that we have all of the data uploaded, we’ll begin with some
+quality control analysis of the data. This is useful for verifying that
+the data is high quality, but also will benefit us when we run later
+steps/need to know info as inputs for the mapping tools (e.g., read
+size).</p>
+<div id="fastqc" class="section level3">
+<h3>FastQC</h3>
+<ul class="task-list">
+<li><input type="checkbox" />On the top left of the page, the tool pane
+has a search bar. Type <code>Flatten</code> into the search bar and
+select the <code>Flatten collection</code> tool. This will open the
+Flatten collection tool in the middle pane.</li>
+</ul>
+<p><img src="activity_files/figure-html/1kWsS23lOJxfbhE8jSdE92JWnEceUEYm5xovCczPbe-8_g2f3201278fa_0_35.png" width="480" /></p>
+<ul class="task-list">
+<li><input type="checkbox" />In the middle pane, if the “Input
+Collection:” is not already filled in with “2 PE fastqs”, click the down
+arrow and select it.</li>
+</ul>
+<p><img src="activity_files/figure-html/1kWsS23lOJxfbhE8jSdE92JWnEceUEYm5xovCczPbe-8_g2f3201278fa_0_39.png" width="480" /></p>
+<ul class="task-list">
+<li><input type="checkbox" />Click the blue “&gt; Run Tool” button. This
+will add the job to the queue and add the output to the top of the
+history pane.</li>
+</ul>
+<p><img src="activity_files/figure-html/1kWsS23lOJxfbhE8jSdE92JWnEceUEYm5xovCczPbe-8_g281646704fe_0_65.png" width="480" /></p>
+<ul class="task-list">
+<li><p><input type="checkbox" />You can rename the output to a more
+informative name by</p>
+<ul class="task-list">
+<li><input type="checkbox" />Clicking the pencil (the middle icon) for
+that dataset in the history pane. The icons are on the right side.</li>
+</ul></li>
+</ul>
+<p><img src="activity_files/figure-html/1kWsS23lOJxfbhE8jSdE92JWnEceUEYm5xovCczPbe-8_g2f3201278fa_0_43.png" width="480" /></p>
+<ul class="task-list">
+<li><input type="checkbox" />In the “Edit Collection Attributes” pane
+that opens in the middle panel, enter a more informative “Name”</li>
+</ul>
+<p><img src="activity_files/figure-html/1kWsS23lOJxfbhE8jSdE92JWnEceUEYm5xovCczPbe-8_g2f3201278fa_0_47.png" width="480" /></p>
+<ul class="task-list">
+<li><p><input type="checkbox" />Click the blue “Save” button</p></li>
+<li><p><input type="checkbox" />On the top left of the page, using the
+tool pane search bar, type <code>Fastq</code> into the search bar and
+select the <code>FastQC</code> tool. This will open the FastQC tool in
+the middle panel.</p></li>
+</ul>
+<p><img src="activity_files/figure-html/1kWsS23lOJxfbhE8jSdE92JWnEceUEYm5xovCczPbe-8_g281646704fe_0_73.png" width="480" /></p>
+<ul class="task-list">
+<li><input type="checkbox" />In the blue banner highlighted section,
+select the file folder “Dataset collection” icon</li>
+</ul>
+<p><img src="activity_files/figure-html/1kWsS23lOJxfbhE8jSdE92JWnEceUEYm5xovCczPbe-8_g281646704fe_0_77.png" width="480" /></p>
+<ul class="task-list">
+<li><input type="checkbox" />If the “Raw read data from your current
+history doesn’t automatically fill with the renamed output from the
+Flatten collection tool, select that dataset as input.</li>
+</ul>
+<p><img src="activity_files/figure-html/1kWsS23lOJxfbhE8jSdE92JWnEceUEYm5xovCczPbe-8_g281646704fe_0_82.png" width="480" /></p>
+</div>
+<div id="multiqc-to-combine-fastqc-output" class="section level3">
+<h3>MultiQC to combine FASTQC output</h3>
+<ul class="task-list">
+<li><input type="checkbox" />On the top left of the page, using the tool
+pane search bar, type <code>multi</code> into the search bar and select
+the <code>MultiQC</code> tool. This will open the <code>MultiQC</code>
+tool in the middle pane.</li>
+</ul>
+<p><img src="activity_files/figure-html/1kWsS23lOJxfbhE8jSdE92JWnEceUEYm5xovCczPbe-8_g281646704fe_0_88.png" width="480" /></p>
+<p><img src="activity_files/figure-html/1kWsS23lOJxfbhE8jSdE92JWnEceUEYm5xovCczPbe-8_g281646704fe_0_93.png" width="480" /></p>
+<ul class="task-list">
+<li><input type="checkbox" />Within the Results section, for the
+<code>Which tool was used to generate logs?</code> question, use the
+down arrow to see a list and scroll down until you see
+<code>FastQC</code> and select <code>FastQC</code>.</li>
+</ul>
+<p><img src="activity_files/figure-html/1kWsS23lOJxfbhE8jSdE92JWnEceUEYm5xovCczPbe-8_g281646704fe_0_97.png" width="480" /></p>
+<ul class="task-list">
+<li><input type="checkbox" />In the FastQC output section, click the
+<code>+ Insert FastQC output</code> button.</li>
+</ul>
+<p><img src="activity_files/figure-html/1kWsS23lOJxfbhE8jSdE92JWnEceUEYm5xovCczPbe-8_g281646704fe_0_101.png" width="480" /></p>
+<ul class="task-list">
+<li><input type="checkbox" />In the blue banner highlighted section,
+select the file folder “Dataset collection” icon</li>
+</ul>
+<p><img src="activity_files/figure-html/1kWsS23lOJxfbhE8jSdE92JWnEceUEYm5xovCczPbe-8_g281646704fe_0_104.png" width="480" /></p>
+<ul class="task-list">
+<li><input type="checkbox" />Then with the down arrow, select the
+<code>FASTQC on collection __: RawData</code> data set</li>
+</ul>
+<p><img src="activity_files/figure-html/1kWsS23lOJxfbhE8jSdE92JWnEceUEYm5xovCczPbe-8_g281646704fe_0_112.png" width="480" /></p>
+</div>
+<div id="cutadapt-trim-adaptors" class="section level3">
+<h3>Cutadapt / Trim adaptors</h3>
+</div>
+</div>
+<div id="mapping" class="section level2">
+<h2>Mapping</h2>
+<div id="run-star" class="section level3">
+<h3>Run STAR</h3>
+</div>
+<div id="multiqc-to-combine-log-output-from-star"
+class="section level3">
+<h3>MultiQC to combine log output from STAR</h3>
+</div>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
