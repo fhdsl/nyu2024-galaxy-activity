@@ -290,7 +290,8 @@ href="https://training.galaxyproject.org/training-material/topics/transcriptomic
 RNA-Seq data analysis”</a> Galaxy Training Tutorial.</p>
 <p>It uses <a href="https://zenodo.org/records/6457007">data that is
 deposited on and available from zenodo</a>, including subsampled data
-that will be quicker to work with.</p>
+that will be quicker to work with. For more info on the data, checkout
+the tutorial linked above.</p>
 </div>
 <div id="activity-steps" class="section level1">
 <h1>Activity steps</h1>
@@ -498,7 +499,7 @@ select the file folder “Dataset collection” icon</li>
 </ul>
 <p><img src="activity_files/figure-html/1kWsS23lOJxfbhE8jSdE92JWnEceUEYm5xovCczPbe-8_g281646704fe_0_77.png" width="480" /></p>
 <ul class="task-list">
-<li><input type="checkbox" />If the “Raw read data from your current
+<li><input type="checkbox" />If the “Raw read data” from your current
 history doesn’t automatically fill with the renamed output from the
 Flatten collection tool, select that dataset as input.</li>
 </ul>
@@ -536,19 +537,118 @@ select the file folder “Dataset collection” icon</li>
 <code>FASTQC on collection __: RawData</code> data set</li>
 </ul>
 <p><img src="activity_files/figure-html/1kWsS23lOJxfbhE8jSdE92JWnEceUEYm5xovCczPbe-8_g281646704fe_0_112.png" width="480" /></p>
+<ul class="task-list">
+<li><p><input type="checkbox" />Optionally, you can add a Report title
+near the bottom of the middle pane</p></li>
+<li><p><input type="checkbox" />Click the blue Run tool button in the
+upper right of the middle pane</p></li>
+</ul>
+<p><img src="activity_files/figure-html/1kWsS23lOJxfbhE8jSdE92JWnEceUEYm5xovCczPbe-8_g281646704fe_0_116.png" width="480" /></p>
+<ul class="task-list">
+<li><input type="checkbox" />Let’s open and inspect the webpage output
+at the top of the history pane. To view the output file, click the eye
+icon. To download the output, click the save/floppy disc icon.</li>
+</ul>
+<p><img src="activity_files/figure-html/1kWsS23lOJxfbhE8jSdE92JWnEceUEYm5xovCczPbe-8_g281646704fe_0_126.png" width="480" /></p>
 </div>
 <div id="cutadapt-trim-adaptors" class="section level3">
 <h3>Cutadapt / Trim adaptors</h3>
+<ul class="task-list">
+<li><input type="checkbox" />On the top left of the page, using the tool
+pane search bar, type <code>Cut</code> into the search bar and select
+the <code>Cutadapt</code> tool. This will open the <code>Cutadapt</code>
+tool in the middle pane.</li>
+</ul>
+<p><img src="activity_files/figure-html/1kWsS23lOJxfbhE8jSdE92JWnEceUEYm5xovCczPbe-8_g281646704fe_0_121.png" width="480" /></p>
+<p><img src="activity_files/figure-html/1kWsS23lOJxfbhE8jSdE92JWnEceUEYm5xovCczPbe-8_g281646704fe_0_133.png" width="480" /></p>
+<ul class="task-list">
+<li><input type="checkbox" />For
+<code>Single-end or Paired-end reads?</code> click the down arrow and
+select <code>Paired-end Collection</code>.</li>
+</ul>
+<p><img src="activity_files/figure-html/1kWsS23lOJxfbhE8jSdE92JWnEceUEYm5xovCczPbe-8_g281646704fe_0_137.png" width="480" /></p>
+<ul class="task-list">
+<li><input type="checkbox" />Verify that it selected your
+<code>2 PE fastqs</code> as the paired collection input, if not, select
+it.</li>
+</ul>
+<p><img src="activity_files/figure-html/1kWsS23lOJxfbhE8jSdE92JWnEceUEYm5xovCczPbe-8_g281646704fe_0_141.png" width="480" /></p>
+<ul class="task-list">
+<li><input type="checkbox" />Scroll down to the
+<code>Other Read Trimming Options</code> section and edit the
+<code>Quality cutoff(s) (R1)*</code> parameter. Enter a value of
+20.</li>
+</ul>
+<p><img src="activity_files/figure-html/1kWsS23lOJxfbhE8jSdE92JWnEceUEYm5xovCczPbe-8_g281646704fe_0_146.png" width="480" /></p>
+<ul class="task-list">
+<li><input type="checkbox" />Scroll down to the
+<code>Read Filtering Options</code> section and edit the
+<code>Minimum length (R1)</code> parameter. Enter a value of 20.</li>
+</ul>
+<p><img src="activity_files/figure-html/1kWsS23lOJxfbhE8jSdE92JWnEceUEYm5xovCczPbe-8_g281646704fe_0_156.png" width="480" /></p>
+<ul class="task-list">
+<li><input type="checkbox" />Scroll down to the
+<code>Additional outputs to generate</code> checkbox section and check
+the
+<code>Report: Cutadapt's per-adapter statistics. You can use this file with MultiQC</code></li>
+</ul>
+<p><img src="activity_files/figure-html/1kWsS23lOJxfbhE8jSdE92JWnEceUEYm5xovCczPbe-8_g281646704fe_0_160.png" width="480" /></p>
+<ul class="task-list">
+<li><input type="checkbox" />Click the blue Run tool button</li>
+</ul>
+</div>
+<div id="view-cutadapt-results-with-multiqc" class="section level3">
+<h3>View Cutadapt results with MultiQC</h3>
+<ul class="task-list">
+<li><input type="checkbox" />On the top left of the page, using the tool
+pane search bar, type <code>multi</code> into the search bar and select
+the <code>MultiQC</code> tool. This will open the <code>MultiQC</code>
+tool in the middle pane.</li>
+</ul>
+<p><img src="activity_files/figure-html/1kWsS23lOJxfbhE8jSdE92JWnEceUEYm5xovCczPbe-8_g281646704fe_0_88.png" width="480" /></p>
+<p><img src="activity_files/figure-html/1kWsS23lOJxfbhE8jSdE92JWnEceUEYm5xovCczPbe-8_g281646704fe_0_93.png" width="480" /></p>
+<ul class="task-list">
+<li><input type="checkbox" />Within the <code>Results</code> section and
+<code>Which tool was used to generate logs</code> subsection, click the
+down arrow and select <code>Cutadapt/Trim Galore!</code>.</li>
+</ul>
+<p><img src="activity_files/figure-html/1kWsS23lOJxfbhE8jSdE92JWnEceUEYm5xovCczPbe-8_g281646704fe_0_168.png" width="480" /></p>
+<ul class="task-list">
+<li><input type="checkbox" />In the blue banner highlighted section,
+select the file folder “Dataset collection” icon &amp; then with the
+down arrow, select the <code>Cutadapt on collection __: Report</code>
+data set</li>
+</ul>
+<p><img src="activity_files/figure-html/1kWsS23lOJxfbhE8jSdE92JWnEceUEYm5xovCczPbe-8_g281646704fe_0_172.png" width="480" /></p>
+<ul class="task-list">
+<li><input type="checkbox" />We can explore this output as well to see
+how much of the data was trimmed</li>
+</ul>
 </div>
 </div>
-<div id="mapping" class="section level2">
-<h2>Mapping</h2>
-<div id="run-star" class="section level3">
-<h3>Run STAR</h3>
+<div id="next-steps-mapping-with-rna-star" class="section level2">
+<h2>Next steps: Mapping with RNA STAR</h2>
+<p>Follow the steps in the <a
+href="https://training.galaxyproject.org/training-material/topics/transcriptomics/tutorials/ref-based/tutorial.html#mapping">Galaxy
+walkthrough to continue with mapping</a></p>
 </div>
-<div id="multiqc-to-combine-log-output-from-star"
-class="section level3">
-<h3>MultiQC to combine log output from STAR</h3>
+<div id="additional-resources" class="section level2">
+<h2>Additional Resources</h2>
+<p>Here are some other relevant tutorials from Galaxy:</p>
+<div id="bulk-rna-seq" class="section level3">
+<h3>Bulk-RNA Seq</h3>
+<p><a
+href="https://usegalaxy.org/training-material/topics/transcriptomics/tutorials/rna-seq-reads-to-counts/tutorial.html#1-rna-seq-reads-to-counts">RNA-Seq
+Reads to Counts</a></p>
+<p><a
+href="https://usegalaxy.org/training-material/topics/transcriptomics/tutorials/rna-seq-counts-to-genes/tutorial.html">RNA-Seq
+Counts to Genes (differentially expressed genes)</a></p>
+<p><a
+href="https://usegalaxy.org/training-material/topics/transcriptomics/tutorials/rna-seq-genes-to-pathways/tutorial.html">RNA-Seq
+Genes to Pathways (GSEA)</a></p>
+<p><a
+href="https://usegalaxy.org/training-material/topics/transcriptomics/tutorials/rna-seq-genes-to-pathways/tutorial.html">Tutorials
+for Visualizing RNA-seq Results</a></p>
 </div>
 </div>
 </div>
