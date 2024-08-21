@@ -86,7 +86,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1IxnNcgbHLuwOMofO
 
 The ITCR provides [tables broken by down data type with information on available analysis tools](https://www.cancer.gov/about-nci/organization/cssi/resources/informatics-tools)
 
-```{r echo=FALSE, fig.alt = "To explore available tools for your analyses, scan this QR code or visit i t c r dot cancer dot gov forward slash informatics dash tools", fig.link = "https://www.cancer.gov/about-nci/organization/cssi/resources/informatics-tools"}
+```{r echo=FALSE, fig.alt = "To explore available tools for your analyses, scan this QR code or visit h t t p s foward slash forward slash bit dot l y forward slash i t c r underscore tool underscore list", fig.link = "https://www.cancer.gov/about-nci/organization/cssi/resources/informatics-tools"}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1IxnNcgbHLuwOMofOqhKx5IoIbPI1DNtPyORT4FjK6TY/edit#slide=id.g23d299b7942_0_7")
 ```
 
