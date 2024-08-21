@@ -1,0 +1,63 @@
+---
+title: "Computing for Cancer Informatics Workshop"
+output: html_document
+---
+
+## Slides
+
+The slides for this workshop are available at the [following link](https://bit.ly/itn_nyu_2024_computing)
+
+```{r echo=FALSE, fig.alt="The slides for this workshop are available by scanning this QR code or by visiting the link h t t p s colon forward slash forward slash bit dot l y forward slash i t n underscore n y u underscore 2024 underscore computing", fig.link="https://bit.ly/itn_nyu_2024_computing"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1iQlW7yMfAGrv1cz-QfzQ5fUmTnsvQl1Kf_696v1ioUE/edit#slide=id.g2814eb71889_0_10")
+```
+
+## Logistical information
+
+### Learner Survey
+
+Please provide information in the [following survey](https://bit.ly/hutch_learner) as this helps us keep you informed of upcoming workshops, and to follow up and see how you are using what you have learned. 
+
+```{r echo=FALSE, fig.alt="To provide information for us, please scan this QR code or use the link h t t p s colon forward slash forward slash bit dot l y forward slash hutch underscore learner", fig.link="https://bit.ly/hutch_learner"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1iQlW7yMfAGrv1cz-QfzQ5fUmTnsvQl1Kf_696v1ioUE/edit#slide=id.g2f28a693af9_0_0")
+```
+
+### Slido
+
+Please also login to slido at [slido.com](https://www.slido.com/) for this workshop for interactive questions throughout. 
+
+```{r echo=FALSE, fig.alt="The Slido code for this workshop is 1467171. Please enter the code at slido dot com", fig.link="https://www.slido.com/"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1iQlW7yMfAGrv1cz-QfzQ5fUmTnsvQl1Kf_696v1ioUE/edit#slide=id.g258d1ae7304_0_928")
+```
+
+### Galaxy Activity
+
+- In addition to walking through the activity with you, we've included [step-by-step written instructions for the activity here](https://hutchdatascience.org/nyu2024-galaxy-activity/activity.html)
+
+- Please [use this link to access the Galaxy platform specifically for our activity](https://usegalaxy.org/join-training/itn-nyu-2024/)
+
+```{r echo=FALSE, fig.alt="To access the Galaxy platform specifically for our training session, please use the link h t t p s colon forward slash forward slash use galaxy dot org forward slash join dash training forward slash i t n dash n y u dash 2024 forward slash", fig.link="https://usegalaxy.org/join-training/itn-nyu-2024/"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1iQlW7yMfAGrv1cz-QfzQ5fUmTnsvQl1Kf_696v1ioUE/edit#slide=id.g2752f36a297_0_18")
+```
+
+### Learner Demographic Survey
+
+Please provide information in the [following survey](https://bit.ly/itn_demo) as this helps us gather necessary information we need to report to the NIH for trainings we host.
+
+```{r echo=FALSE, fig.alt="To provide us with necessary reporting information, please use this QR code or follow the link h t t p s colon forward slash forward slash bit dot l y forward slash i t n underscore demo", fig.link="https://bit.ly/itn_demo"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1iQlW7yMfAGrv1cz-QfzQ5fUmTnsvQl1Kf_696v1ioUE/edit#slide=id.g275c36d274f_0_0")
+```
+
+## Other Resources
+
+### Relevant (free!) courses
+
+Material for this workshop is adapted from the [Computing for Cancer Informatics ITN course](https://jhudatascience.org/Computing_for_Cancer_Informatics/) ... That and our other courses are available for free. See [our website](https://www.itcrtraining.org/courses) for more information.
+
+```{r echo=FALSE, fig.alt="This table lists the various courses available from the I T N including ones under development that will be available in the future. Computing for Cancer Informatics is highlighted because this workshop is adapted from that larger course. For more info on and to access to any of these courses, visit i t c r training dot org", fig.link="https://www.itcrtraining.org/courses"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1iQlW7yMfAGrv1cz-QfzQ5fUmTnsvQl1Kf_696v1ioUE/edit#slide=id.g2efd5766186_0_4")
+```
+
+### Resources for Learning about the Galaxy Platform
+
+- Follow [this link to watch a short introductory video about Galaxy](https://training.galaxyproject.org/training-material/videos/watch.html?v=/introduction/tutorials/galaxy-intro-short/slides)
+- Follow [this Galaxy training tutorial](https://training.galaxyproject.org/training-material/topics/introduction/tutorials/galaxy-intro-short/tutorial.html) for a short introduction to the platform and how to use it, like uploading files, using tools, viewing histories, & running workflows.

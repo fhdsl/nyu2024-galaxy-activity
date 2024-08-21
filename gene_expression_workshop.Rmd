@@ -1,0 +1,92 @@
+---
+title: "Understanding Gene Expression Data Workshop"
+output: html_document
+---
+
+## Slides
+
+The slides for this workshop are available at the [following link](https://bit.ly/itn_nyu_2024_expression) 
+
+```{r echo=FALSE, fig.alt="The slides for this workshop are available by scanning this QR code or by visiting the link h t t p s colon forward slash forward slash bit dot l y forward slash i t n underscore n y u underscore 2024 underscore expression", fig.link="https://bit.ly/itn_nyu_2024_expression"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1IxnNcgbHLuwOMofOqhKx5IoIbPI1DNtPyORT4FjK6TY/edit#slide=id.g2f393976e24_0_3")
+```
+
+## Logistical information
+
+### Learner Survey
+
+Please provide information in the [following survey](https://bit.ly/hutch_learner) as this helps us keep you informed of upcoming workshops, and to follow up and see how you are using what you have learned.
+
+```{r echo=FALSE, fig.alt="To provide information for us, please scan this QR code or use the link h t t p s colon forward slash forward slash bit dot l y forward slash hutch underscore learner", fig.link="https://bit.ly/hutch_learner"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1IxnNcgbHLuwOMofOqhKx5IoIbPI1DNtPyORT4FjK6TY/edit#slide=id.g280003dbeb2_0_218")
+```
+
+### Slido
+
+Please also login to slido at [slido.com](https://www.slido.com/) for this workshop for interactive questions throughout.
+
+```{r echo=FALSE, fig.alt="The Slido code for this workshop is 7176191. Please enter the code at slido dot com", fig.link="https://www.slido.com/"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1IxnNcgbHLuwOMofOqhKx5IoIbPI1DNtPyORT4FjK6TY/edit#slide=id.g28d4fbef9f9_0_456")
+```
+
+### Gene Pattern Activity
+
+#### Bulk RNA-seq
+
+- [Download the relevant datasets at this link](https://datasets.genepattern.org/?prefix=data/workshops/240411-PSTP/)
+
+```{r echo=FALSE, fig.alt="This slide provides info on which datasets to download, specifically the c l s and g c t files, from h t t p s colon forward slash forward slash datasets doc gene pattern dot org forward slash question mark prefix equal sign data forward slash workshops forward slash 240411 dash P S T P forward slash", fig.link="https://datasets.genepattern.org/?prefix=data/workshops/240411-PSTP/"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1IxnNcgbHLuwOMofOqhKx5IoIbPI1DNtPyORT4FjK6TY/edit#slide=id.g2f2ca03ec26_0_0")
+```
+
+- [Go to the Gene Pattern platform](http://cloud.genepattern.org/gp/)
+
+```{r echo=FALSE, fig.alt="Go to h t t p colon forward slash forward slash cloud dot gene pattern dot org forward slash g p forward slash", fig.link="http://cloud.genepattern.org/gp/"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1IxnNcgbHLuwOMofOqhKx5IoIbPI1DNtPyORT4FjK6TY/edit#slide=id.g2f2ca03ec26_0_34")
+```
+
+#### Single cell RNA-seq
+
+- [Download practice 10x single cell data](https://s3-us-west-2.amazonaws.com/10x.files/samples/cell/pbmc3k/pbmc3k_filtered_gene_bc_matrices.tar.gz)
+
+```{r echo=FALSE, fig.alt="Use this link to download practice 10x single cell data. No need to unzip it", fig.link="https://s3-us-west-2.amazonaws.com/10x.files/samples/cell/pbmc3k/pbmc3k_filtered_gene_bc_matrices.tar.gz"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1IxnNcgbHLuwOMofOqhKx5IoIbPI1DNtPyORT4FjK6TY/edit#slide=id.g2800f2a6905_0_37")
+```
+
+- [Go to the Gene Pattern platform](http://cloud.genepattern.org/gp/)
+
+```{r echo=FALSE, fig.alt="Go to h t t p colon forward slash forward slash cloud dot gene pattern dot org forward slash g p forward slash", fig.link="http://cloud.genepattern.org/gp/"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1IxnNcgbHLuwOMofOqhKx5IoIbPI1DNtPyORT4FjK6TY/edit#slide=id.g2800f2a6905_0_165")
+```
+
+
+### Learner Demographic Survey
+
+Please provide information in the [following survey](https://bit.ly/itn_demo) as this helps us gather necessary information we need to report to the NIH for trainings we host.
+
+```{r echo=FALSE, fig.alt="To provide us with necessary reporting information, please use this QR code or follow the link h t t p s colon forward slash forward slash bit dot l y forward slash i t n underscore demo", fig.link="https://bit.ly/itn_demo"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1IxnNcgbHLuwOMofOqhKx5IoIbPI1DNtPyORT4FjK6TY/edit#slide=id.g44b83cf246132a03_192")
+```
+
+## Other Resources
+
+### Relevant (free!) courses
+
+Material for this workshop is adapted from the [Choosing Genomics Tools ITN course](https://bit.ly/genomics-tools) which is a sort of wikipedia for -omics analyses. That and our other courses are available for free. See [our website](https://www.itcrtraining.org/courses) for more information.
+
+```{r echo=FALSE, fig.alt = "This table lists the various courses available from the I T N including ones under development that will be available in the future. Choosing Genomics Tools is highlighted because this workshop is adapted from that larger course. For more info on and to access any of these courses, visit i t c r training dot org", fig.link="https://www.itcrtraining.org/courses"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1IxnNcgbHLuwOMofOqhKx5IoIbPI1DNtPyORT4FjK6TY/edit#slide=id.g2f00a92f04c_0_4")
+```
+
+```{r echo=FALSE, fig.alt = "Example of The Choosing Genomics Tools course website showing chapters that are general and others that are specific to a certain data type. To visit this coures's webiste, please scan the QR code or visit the link h t t p s colon forward slash forward slash bit dot l y forward slash genomics dash tools", fig.link="https://bit.ly/genomics-tools"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1IxnNcgbHLuwOMofOqhKx5IoIbPI1DNtPyORT4FjK6TY/edit#slide=id.g260a5f21d81_0_202")
+```
+
+### Resources for finding tools to help with your analyses
+
+The ITCR provides [tables broken by down data type with information on available analysis tools](https://www.cancer.gov/about-nci/organization/cssi/resources/informatics-tools)
+
+```{r echo=FALSE, fig.alt = "To explore available tools for your analyses, scan this QR code or visit h t t p s foward slash forward slash bit dot l y forward slash i t c r underscore tool underscore list", fig.link = "https://www.cancer.gov/about-nci/organization/cssi/resources/informatics-tools"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1IxnNcgbHLuwOMofOqhKx5IoIbPI1DNtPyORT4FjK6TY/edit#slide=id.g28166fa6a43_1_38")
+```
+

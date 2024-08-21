@@ -1,34 +1,26 @@
 ---
-title: "**Website Name**"
+title: "**ITN at NYU Workshops 2024**"
 output:
   html_document
 ---
 
 <div class = "banner_color">
-Banner text!  
+Welcome to the ITN at NYU Workshops!  
 </div>
 
 ### **About**
 
-This website was created with the OTTR_Template_Website template. This enables simpler creation of websites that have automated checks for broken URLs and spelling errors, as well as automated rendering of all html files. No need to worry about git conflicts for html files!
+This website was created with the [OTTR_Template_Website template](https://www.ottrproject.org/) and serves as a unified source to access slides and other resources utilized in each workshop.
 
-Here is how you can include images in your website pages (this one is saved in `resources/images` to keep things tidy:
 
-```{r, fig.align='center', fig.alt= "Example image", echo = FALSE, out.width="30%"}
-knitr::include_graphics("resources/images/example_image.png")
-```
+There are 3 workshops throughout the day, each covering one of the following topics:
 
- 
- 
-We will go through the following:
-
-1. How to set up your repository to enable the GitHub actions of the template. (Setup tab)
-2. How to host your website using GitHub (Hosting tab)
-3. How to modify your website structure (Structure tab)
-4. How to change your website style (Style tab)
-5. More information about GitHub Actions (Git Actions tab)
-
-Click on each tab to learn more.
+1. [What is gene expression data?](https://hutchdatascience.org/nyu2024-galaxy-activity/gene_expression_workshop.html)<br/>
+10am - 11:30am -- Session led by Candace Savonen and Kate Isaac<br/><br/>
+2. [What are cloud computing resources and how can you use them, specifically Galaxy?](https://hutchdatascience.org/nyu2024-galaxy-activity/computing_workshop.html)<br/>
+12pm - 1:30pm -- Session led by Carrie Wright and Kate Isaac<br/><br/>
+3. [How is AI useful for scientific research and how do you use it responsibly?](https://hutchdatascience.org/nyu2024-galaxy-activity/ai_workshop.html)<br/>
+1:45pm - 3pm -- Session led by Carrie Wright and Candace Savonen<br/><br/> 
 
 
 
