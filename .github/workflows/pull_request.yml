@@ -25,7 +25,7 @@ jobs:
 
       # Delete the branch if this has been run before
       - name: Delete branch locally and remotely
-        run: git push origin --delete preview-${{ github.event.pull_request.number }} || echo "No branch to delete"
+        run: git push --force origin --delete preview-${{ github.event.pull_request.number }} || echo "No branch to delete"
 
       # Make the branch fresh
       - name: Make the branch fresh
