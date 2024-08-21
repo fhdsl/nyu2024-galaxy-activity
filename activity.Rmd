@@ -262,6 +262,17 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1kWsS23lOJxfbhE8j
 ottrpal::include_slide("https://docs.google.com/presentation/d/1kWsS23lOJxfbhE8jSdE92JWnEceUEYm5xovCczPbe-8/edit#slide=id.g281646704fe_0_112") 
 ```
  
+ - [ ] Optionally, you can add a Report title near the bottom of the middle pane
+ 
+ - [ ] Click the blue Run tool button in the upper right of the middle pane
+ 
+```{r echo=FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1kWsS23lOJxfbhE8jSdE92JWnEceUEYm5xovCczPbe-8/edit#slide=id.g281646704fe_0_116")
+```
+
+ - [ ] Let's open and inspect the webpage output at the top of the history pane
+ 
+ 
 ### Cutadapt / Trim adaptors
 
 ## Mapping
